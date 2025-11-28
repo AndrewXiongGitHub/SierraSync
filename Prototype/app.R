@@ -92,3 +92,57 @@ setup_env = function()
   }
 }
 
+# APP STUFF
+ui <- fluidPage(
+  # Custom CSS
+  tags$head(
+    tags$style(HTML(""
+                    # CSS Styling Here
+    ))
+  ),
+  
+  # App Title
+  titlePanel("SierraSync"),
+  
+  # Sidebar
+  sidebarLayout(
+    sidebarPanel(
+      class = "sidebar-panel",
+      h4("Day's P&L"),
+      
+      h4("Total P&L"),
+      
+      h4("Trades Taken"),
+      
+      h4("Total Winrate")
+    )
+  ),
+  
+  # Main Panel
+  mainPanel(
+    class = "main-panel",
+    tabsetPanel(
+      # Tab for trade calendar
+      tabPanel("Trade Calendar",
+               br(),
+               div(class = "blurb",
+                   "Display end-of-day P&L by day in a calendar view."),
+               verbatimTextOutput(outputId = "p-l-calendar")
+      ),
+      # Tab for Metrics
+      tabPanel("Metrics",
+               br(),
+               div(class = "blurb",
+                   "Trading metrics."),
+               verbatimTextOutput(outputId = "metrics")
+      ),
+    )
+  )
+  
+)
+
+server <- function(input, output) 
+{
+  
+}
+
