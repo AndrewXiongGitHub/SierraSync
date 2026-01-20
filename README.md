@@ -15,6 +15,7 @@ Granular Filtering: Narrow down data by specific date ranges or trading symbols.
 <h1>📸 Prototype Preview<br></h1>
 Dashboard Overview<br>
 The main dashboard provides an immediate snapshot of trading health through relevant statistic boxes and a cumulative profit/loss trend line.<br>
+
 ![Top of prototype dashboard tab featuring major metrics such as P&L, winrate, and win multiple, as well as a plot for P&L over a time period.](Prototype/images/Dashboard_Top.png)
 
 Flexible Analysis & Filtering<br>
