@@ -1,7 +1,7 @@
-📈 SierraSync<br>
+<h1>📈 SierraSync<br></h1>
 SierraSync is a simple R Shiny dashboard prototype designed to conveniently transform Sierra Chart trade activity into actionable insights. It provides traders with a high-performance interface to track consistency, analyze risk-to-reward ratios, and visualize equity curves with precision.
 
-✨ Key Features<br>
+<h1>✨ Key Features<br></h1>
 Performance Metrics: Real-time calculation of Total P&L, Win Rate, Average Winner/Loser, and R-Multiple.
 
 Interactive Equity Curves: Dynamic Cumulative P&L graphs powered by Plotly for deep-dive session analysis.
@@ -12,7 +12,7 @@ Data Cleaning Pipeline: Automated ingestion of Sierra Chart TradesList.txt files
 
 Granular Filtering: Narrow down data by specific date ranges or trading symbols.
 
-📸 Prototype Preview<br>
+<h1>📸 Prototype Preview<br></h1>
 Dashboard Overview<br>
 The main dashboard provides an immediate snapshot of trading health through relevant statistic boxes and a cumulative profit/loss trend line.<br>
 ![Top of prototype dashboard tab featuring major metrics such as P&L, winrate, and win multiple, as well as a plot for P&L over a time period.](Prototype/images/Dashboard_Top.png)
