@@ -11,19 +11,22 @@ SierraSync is a simple R Shiny dashboard prototype designed to conveniently tran
 </ul>
 
 <h1>📸 Prototype Preview<br></h1>
-Dashboard Overview<br>
+<h2>Dashboard Overview<br></h2>
 The main dashboard provides an immediate snapshot of trading health through relevant statistic boxes and a cumulative profit/loss trend line.<br>
 
 ![Top of prototype dashboard tab featuring major metrics such as P&L, winrate, and win multiple, as well as a plot for P&L over a time period.](Prototype/images/Dashboard_Top.png)
 
-Flexible Analysis & Filtering<br>
+<h2>Flexible Analysis & Filtering<br></h2>
 The sidebar allows for seamless filtering by date range and specific trading instruments, updating the entire dashboard in real-time.<br>
+
 ![Sidebar feature for selecting a specific date range for data display (e.g. 1/2/2025 to 12/31/2025)](Prototype/images/Select_Date_Period.png)
 
-Individual Trade Performance<br>
+<h2>Individual Trade Performance<br></h2>
 Visualize every trade's outcome chronologically to identify outliers, consistency, and trade frequency.<br>
+
 ![Plot showing the outcome of each individual trade as a green (profit) or red (loss) bar. Features an information box containing data for a specifc trade when hovering over each bar.](Prototype/images/Dashboard_Individual_Trade_P&L.png)
 
-Trade Detail Log<br>
+<h2>Trade Detail Log<br></h2>
 A comprehensive and formatted table of all trades, including entry/exit times, duration, and individual profit/loss.<br>
+
 ![Shows more in-depth details for all trades as a table.](Prototype/images/Dashboard_Trades_Detail.png)
