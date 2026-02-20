@@ -187,11 +187,11 @@ server <- function(input, output, session) {
     data %>%
       summarize(
         # Analysis metrics
-        avgWin = mean(profit_loss_c[profit_loss_c > 0], na.rm = TRUE), 
-        avgLoss = mean(profit_loss_c[profit_loss_c < 0], na.rm = TRUE),
+        avgWin = mean(profit_loss_c[profit_loss_c > 1], na.rm = TRUE), 
+        avgLoss = mean(profit_loss_c[profit_loss_c < -1], na.rm = TRUE),
         winMultiple = abs(avgWin / avgLoss),
-        totalWins = sum(profit_loss_c > 0, na.rm = TRUE),
-        totalLosses = sum(profit_loss_c < 0, na.rm = TRUE),
+        totalWins = sum(profit_loss_c > 1, na.rm = TRUE),
+        totalLosses = sum(profit_loss_c < -1, na.rm = TRUE),
         totalTrades = totalWins + totalLosses, 
         
         # Win Rate 
@@ -235,7 +235,7 @@ server <- function(input, output, session) {
     metrics <- summary_metrics()
     valueBox(
       value = paste0(round(metrics$winRate * 100, 1), "%"), 
-      subtitle = "Win Rate (P/L > $0)",
+      subtitle = "Win Rate (P/L > $1)",
       icon = icon("trophy"),
       color = "purple"
     )
@@ -255,7 +255,7 @@ server <- function(input, output, session) {
     metrics <- summary_metrics()
     valueBox(
       value = paste0("$", format(round(metrics$avgWin, 2), big.mark = ",")),
-      subtitle = "Average Winner (P/L > $0)",
+      subtitle = "Average Winner (P/L > $1)",
       icon = icon("arrow-up"),
       color = "green"
     )
@@ -265,7 +265,7 @@ server <- function(input, output, session) {
     metrics <- summary_metrics()
     valueBox(
       value = paste0("-$", format(abs(round(metrics$avgLoss, 2)), big.mark = ",")),
-      subtitle = "Average Loser (P/L < $0)",
+      subtitle = "Average Loser (P/L < -$1)",
       icon = icon("arrow-down"),
       color = "red"
     )
